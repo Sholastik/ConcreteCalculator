@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.app.calculator_betona.viewmodel.ViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        tools:context=".fragment.CalculatorFragment">
+
+        <TextView
+            android:id="@+id/textView5"
+            style="@style/Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:lineSpacingExtra="12sp"
+            android:text="@string/concrete_mass_ratio"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/package_mass" />
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/concrete_components"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView6"
+            style="@style/Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/cost_of_components_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/crushed_stone_ratio" />
+
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/ItemText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/concrete_amount_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/textView7"
+            style="@style/ItemText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/concrete_by_package"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <TextView
+            android:id="@+id/textView8"
+            style="@style/ItemText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/sand_by_ton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+        <TextView
+            android:id="@+id/textView9"
+            style="@style/ItemText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/crushed_stone_by_ton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+        <EditText
+            android:id="@+id/concrete_volume"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:maxLength="6"
+            android:text="@={viewmodel.volume}"
+            app:layout_constraintBottom_toBottomOf="@+id/textView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:importantForAutofill="no"
+            app:layout_constraintTop_toTopOf="@+id/textView2"
+            tools:ignore="LabelFor" />
+
+        <EditText
+            android:id="@+id/concrete_price"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:maxLength="6"
+            android:text="@={viewmodel.concretePrice}"
+            app:layout_constraintBottom_toBottomOf="@+id/textView7"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:importantForAutofill="no"
+            app:layout_constraintTop_toTopOf="@+id/textView7"
+            tools:ignore="LabelFor" />
+
+        <EditText
+            android:id="@+id/sand_price"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:maxLength="6"
+            android:text="@={viewmodel.sandPrice}"
+            app:layout_constraintBottom_toBottomOf="@+id/textView8"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:importantForAutofill="no"
+            app:layout_constraintTop_toTopOf="@+id/textView8"
+            tools:ignore="LabelFor" />
+
+        <EditText
+            android:id="@+id/crushed_stone_price"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:maxLength="6"
+            android:text="@={viewmodel.crushedStonePrice}"
+            app:layout_constraintBottom_toBottomOf="@+id/textView9"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:importantForAutofill="no"
+            app:layout_constraintTop_toTopOf="@+id/textView9"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:id="@+id/textView3"
+            style="@style/ItemText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/concrete_package_mass"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/textView12"
+            style="@style/ItemText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/concrete_ratio_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <TextView
+            android:id="@+id/textView13"
+            style="@style/ItemText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/sand_ratio_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+        <TextView
+            android:id="@+id/textView14"
+            style="@style/ItemText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/crushed_stone_ratio_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <EditText
+            android:id="@+id/package_mass"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:maxLength="6"
+            android:text="@={viewmodel.mass}"
+            app:layout_constraintBottom_toBottomOf="@+id/textView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:importantForAutofill="no"
+            app:layout_constraintTop_toTopOf="@+id/textView3"
+            tools:ignore="LabelFor" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/calculate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:minHeight="56dp"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/crushed_stone_price">
+
+            <TextView
+                style="@style/MainText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/calculate" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <EditText
+            android:id="@+id/concrete_ratio"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:maxLength="6"
+            android:text="@={viewmodel.concreteRatio}"
+            app:layout_constraintBottom_toBottomOf="@+id/textView12"
+            app:layout_constraintEnd_toEndOf="@+id/package_mass"
+            app:layout_constraintStart_toStartOf="@+id/package_mass"
+            android:importantForAutofill="no"
+            app:layout_constraintTop_toTopOf="@+id/textView12"
+            tools:ignore="LabelFor" />
+
+        <EditText
+            android:id="@+id/sand_ratio"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:maxLength="6"
+            android:text="@={viewmodel.sandRatio}"
+            app:layout_constraintBottom_toBottomOf="@+id/textView13"
+            app:layout_constraintEnd_toEndOf="@+id/concrete_ratio"
+            app:layout_constraintStart_toStartOf="@+id/concrete_ratio"
+            android:importantForAutofill="no"
+            app:layout_constraintTop_toTopOf="@+id/textView13"
+            tools:ignore="LabelFor" />
+
+        <EditText
+            android:id="@+id/crushed_stone_ratio"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:maxLength="6"
+            android:text="@={viewmodel.crushedStoneRatio}"
+            app:layout_constraintBottom_toBottomOf="@+id/textView14"
+            app:layout_constraintEnd_toEndOf="@+id/sand_ratio"
+            app:layout_constraintStart_toStartOf="@+id/sand_ratio"
+            android:importantForAutofill="no"
+            app:layout_constraintTop_toTopOf="@+id/textView14"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:id="@+id/average_concrete"
+            style="@style/SmallText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="@+id/textView7"
+            app:layout_constraintTop_toBottomOf="@+id/textView7"
+            tools:text="Средняя цена на цемент в Калининграде" />
+
+        <TextView
+            android:id="@+id/average_sand"
+            style="@style/SmallText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="@+id/textView8"
+            app:layout_constraintTop_toBottomOf="@+id/textView8"
+            tools:text="Средняя цена на песок в Калининграде" />
+
+        <TextView
+            android:id="@+id/average_sand2"
+            style="@style/SmallText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="@+id/textView9"
+            app:layout_constraintTop_toBottomOf="@+id/textView9"
+            tools:text="Средняя цена на щебень в Калининграде" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

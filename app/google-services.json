@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "56844982958",
+    "firebase_url": "https://calculatorbetona.firebaseio.com",
+    "project_id": "calculatorbetona",
+    "storage_bucket": "calculatorbetona.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:56844982958:android:04b8c60581c6c72e262b3f",
+        "android_client_info": {
+          "package_name": "com.app.calculator_betona"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "56844982958-chedtp38a0sqgpehtjuegr7hek43eel5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.calculator_betona",
+            "certificate_hash": "779668c8da9b3700c7b034f70963d3d9bd4a46ef"
+          }
+        },
+        {
+          "client_id": "56844982958-ejds3kdqp01u32k8pfha4qj3pbhtm56d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.calculator_betona",
+            "certificate_hash": "cb0883caec91223cc9514423b215d86168dc8208"
+          }
+        },
+        {
+          "client_id": "56844982958-p1vqs0a3smjk799o5suiqkul8ge1a32o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6iW4-e9fxFLBL64V9dlzhFPvPHNoPE9M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "56844982958-p1vqs0a3smjk799o5suiqkul8ge1a32o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

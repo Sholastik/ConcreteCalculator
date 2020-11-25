@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.app.calculator_betona.viewmodel.ViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        tools:context=".fragment.ResultsActivity">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/order_concrete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:minHeight="56dp"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+            <TextView
+                style="@style/MainText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/order_concrete" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                style="@style/Title"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="32dp"
+                android:layout_weight="1"
+                android:text="@string/results_title" />
+
+            <TextView
+                style="@style/HintText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/volume_label" />
+
+            <TextView
+                style="@style/BigText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{String.format(@string/volume, Double.parseDouble(viewModel.volume))}"
+                tools:text="15 м³" />
+
+            <TextView
+                style="@style/Title"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="32dp"
+                android:layout_weight="1"
+                android:text="@string/concrete_label" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/HintText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/packages_label" />
+
+                    <TextView
+                        style="@style/BigText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@{String.valueOf((int) viewModel.packages)}"
+                        tools:text="15" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/HintText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/price_label" />
+
+                    <TextView
+                        style="@style/BigText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@{String.format(@string/price_format, viewModel.concreteCost)}"
+                        tools:text="6000 ₽" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                style="@style/ItemText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@color/gray"
+                android:gravity="center"
+                android:includeFontPadding="true"
+                android:padding="8dp"
+                android:text="@{String.format(@string/concrete_packages_and_mass_format, Double.parseDouble(viewModel.mass), viewModel.concreteMass / 1000)}"
+                tools:text="Мешки с цементом по 50 кг: 0.714 тонны" />
+
+            <TextView
+                style="@style/Title"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="32dp"
+                android:layout_weight="1"
+                android:text="@string/sand_label" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/HintText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/amount_label" />
+
+                    <TextView
+                        style="@style/BigText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@{String.format(@string/mass_format, viewModel.sandMass)}"
+                        tools:text="15" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/HintText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/price_label" />
+
+                    <TextView
+                        style="@style/BigText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@{String.format(@string/price_format, viewModel.sandCost)}"
+                        tools:text="6000 ₽" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                style="@style/Title"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="32dp"
+                android:layout_weight="1"
+                android:text="@string/crushed_stone_label" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/HintText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/amount_label" />
+
+                    <TextView
+                        style="@style/BigText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@{String.format(@string/mass_format, viewModel.crushedStoneMass)}"
+                        tools:text="15" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/HintText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/price_label" />
+
+                    <TextView
+                        style="@style/BigText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@{String.format(@string/price_format, viewModel.crushedStoneCost)}"
+                        tools:text="6000 ₽" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="24dp"
+                android:background="@color/gray"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    style="@style/MainText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/total_label"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    style="@style/MainText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@{String.format(@string/price_format, viewModel.total)}"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp"
+                    tools:text="20032.4 ₽" />
+
+                <TextView
+                    style="@style/Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="16sp"
+                    android:layout_weight="1"
+                    android:text="@{@string/your_economy + ' ' + String.format(@string/price_format, viewModel.economy)}"
+                    android:textSize="14sp"
+                    tools:text="Ваша экономия составит: 3 000 ₽" />
+
+                <TextView
+                    style="@style/ItemText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    android:text="@{@string/price_per_cube_label + ' ' +String.format(@string/price_format, viewModel.pricePerVolume)}"
+                    android:textSize="14sp"
+                    tools:text="Стоимость одного куба бетона: 4 000 ₽" />
+
+                <TextView
+                    style="@style/ItemText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    android:text="@{String.format(@string/order_format, viewModel.city, (int) viewModel.price)}"
+                    android:textSize="14sp"
+                    tools:text="Заказать готовую смесь с доставкой в Калининграде по цене от 3 400 ₽ за куб" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

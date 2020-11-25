@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_calculator"
+        android:icon="@drawable/ic_calculator"
+        android:title="@string/title_calculator" />
+
+    <item
+        android:id="@+id/navigation_help"
+        android:icon="@drawable/ic_help"
+        android:title="@string/title_help" />
+
+    <item
+        android:id="@+id/navigation_order"
+        android:icon="@drawable/ic_order"
+        android:title="@string/title_order" />
+
+</menu>

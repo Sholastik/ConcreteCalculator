@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">Калькулятор\nБетона</string>
+    <string name="calculate_ratio">Расчет пропорций</string>
+    <string name="order_concrete">Заказать бетон</string>
+
+    <string name="concrete_components">Состав бетона</string>
+    <string name="concrete_amount_label">Сколько нужно бетона (М)</string>
+    <string name="concrete_package_mass">Масса мешка (КГ)</string>
+    <string name="concrete_mass_ratio">Состав бетона по массе</string>
+    <string name="cost_of_components_label">Цена материалов</string>
+    <string name="concrete_by_package">Цемент (за мешок)</string>
+    <string name="concrete_ratio_label">Цемент</string>
+    <string name="sand_ratio_label">Песок</string>
+    <string name="sand_by_ton">Песок (за 1 тонну)</string>
+    <string name="crushed_stone_by_ton">Щебень (за 1 тонну)</string>
+    <string name="crushed_stone_ratio_label">Щебень</string>
+    <string name="calculate">Рассчитать</string>
+
+    <string name="volume">%.3f м³</string>
+    <string name="price_format">%.2f ₽</string>
+    <string name="mass_format">%.3f кг</string>/string>
+
+    <string name="rights_reserved">© 2019</string>
+    <string name="title_calculator">Калькулятор</string>
+    <string name="title_help">Инструкция</string>
+    <string name="title_order">Заказать</string>
+
+    <string name="help_entry_1">Сколько нужно бетона, м³?</string>
+    <string name="help_entry_2">Здесь введите объём бетона (в кубических метрах) который необходимо получить в итоге.</string>
+    <string name="help_entry_3">Масса мешка, кг</string>
+    <string name="help_entry_4">Укажите массу мешка цемента в килограммах. Современные производители предлагают к продаже мешки с цементом весом 5, 10, 25, и 50 кг.\n\n
+    Упаковка массой 50 кг наиболее выгодная, поскольку позволяет сэкономить на упаковке, в сравнении с мешками меньшего объема и является оптимальной для погрузки-разгрузки.</string>
+    <string name="help_entry_5">Состав бетона по массе — здесь введите соотношения составляющих для бетона: цемента, песка и щебня.</string>
+    <string name="help_entry_6">Приблизительное соотношение компонентов для бетонной смеси: цемент –1 часть, песок – 2-3 части, щебень – 4-5 частей,  вода – 1/2 части (смесь должна быть пластичной и не очень жидкой).\n\n
+    Например: цемент — 100 кг, щебень – 450 кг, песок – 300 кг, вода – 50 литров.\n\n
+    Эти цифры зависят от следующих факторов: нужной марки бетона, марочности цемента, характеристик песка, щебня (фракция), использования пластификаторов или других добавок (например, повышающих морозоустойчивость), и т.д. </string>
+    <string name="help_entry_7">Рассчитать</string>
+    <string name="help_entry_8">В результате Вы сможете узнать количество и стоимость материалов для приготовления требуемого количества кубических метров бетона, сколько для этого нужно мешков цемента и его стоимость.</string>
+    <string name="results_title">Количество и стоимость материалов</string>
+    <string name="volume_label">Объем готового бетона</string>
+    <string name="concrete_label">Цемент</string>
+    <string name="packages_label">Мешков</string>
+    <string name="price_label">Стоимость</string>
+
+    <string name="concrete_packages_and_mass_format">Мешки с цементом по %.2f кг: %.3f тонны</string>
+    <string name="sand_label">Песок</string>
+    <string name="amount_label">Количество</string>
+    <string name="crushed_stone_label">Щебень</string>
+    <string name="total_label">Итого</string>
+    <string name="your_economy">Ваша экономия составит: </string>
+    <string name="price_per_cube_label">Стоимость одного куба бетона:</string>
+    <string name="order">Заказать</string>
+    <string name="city_format">Заказать готовую смесь с доставкой в %s по цене</string>
+    <string name="average_price_format">от %d ₽/м³</string>
+
+    <string name="preference_city_name">CITY_NAME</string>
+    <string name="preferences">APP_PREFERENCES</string>
+    <string name="default_city">Moscow</string>
+
+    <string name="order_format">Заказать готовую смесь с доставкой в %s по цене от %d ₽ за куб</string>
+    <string name="web_site">https://beton.cf</string>
+
+    <string name="rate_dialog_title">Оцените приложение</string>
+    <string name="rate_dialog_message">Спасибо, что пользуетесь нашим калькулятором!
+        Чтобы сделать его еще удобнее, нам нужна Ваша оценка и отзыв.</string>
+    <string name="rate_dialog_ok">Оценить</string>
+    <string name="rate_dialog_cancel">Возможно, позже</string>
+</resources>

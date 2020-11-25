@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="IconLocation">
+        <ignore path="src/main/res/drawable/background.webp" />
+        <ignore path="src/main/res/drawable/concrete_mixer.webp" />
+        <ignore path="src/main/res/drawable/concrete_mixer.webp" />
+        <ignore path="src/main/res/drawable/small_background.webp" />
+        <ignore path="src/main/res/drawable/topic_1.webp" />
+        <ignore path="src/main/res/drawable/topic_web.webp" />
+    </issue>
+</lint>

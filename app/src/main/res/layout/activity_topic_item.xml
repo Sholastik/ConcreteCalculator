@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.TopicItemActivity">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            android:padding="24dp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="1dp">
+
+            <ImageButton
+                android:id="@+id/arrow_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:padding="8dp"
+                app:srcCompat="@drawable/ic_arrow"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/MainText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:gravity="start|center_vertical"
+                tools:text="Какой лучше электрический рубанок" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/topic_1"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/text"
+                    style="@style/ItemText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="24dp"
+                    android:gravity="start"
+                    android:textSize="14sp"
+                    tools:text="Цемент и вода – главные составляющие бетона, связующие все компоненты в единую монолитную структуру.             \n\n             Чтобы получить качественный бетон высокой прочности важно рассчитать правильную пропорцию бетона. А именно соотношение воды, песка и цемента. Если использовать цемент марки м-400, бетон выйдет марки м-250 (повышение марки цемента позволяет поднять марку и соответственно свойства бетона).             \n\n             Также при приготовлении бетонной смеси важно учитывать влажность и влагопоглощение наполнителей – щебня, песка и не добавлять слишком много воды. Типовые нормы расхода цемента для приготовления бетонов сборных и монолитных бетонных, железобетонных изделий и конструкций регламентированы СНиП 5.01.23-83.             \n\n             Цемент для бетона должен соответствовать требованиям ГОСТ 22266-76 «Цементы сульфатостойкие. Технические условия».         " />
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
